@@ -77,4 +77,8 @@ public class RegisterPage extends BaseClass {
     public void verifyRegistrationSuccessMsg(){
         BaseClass.verifyTitle(successMsg,"Congratulations! Your new account has been successfully created!");
     }
+
+
+
+
 }

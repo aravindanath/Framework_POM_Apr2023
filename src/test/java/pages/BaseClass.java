@@ -125,4 +125,13 @@ public class BaseClass {
         Assert.assertEquals(actualTitle,title);
     }
 
+    public static void waitforelement(long seconds){
+        try{
+            Thread.sleep(seconds);
+
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+    }
 }

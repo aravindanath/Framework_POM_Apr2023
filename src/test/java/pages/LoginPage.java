@@ -23,7 +23,25 @@ public class LoginPage extends BaseClass {
     @FindBy(xpath = "//input[@value='Login']")
     public WebElement loginButton;
 
-    //
+    @FindBy(xpath = "//span[text()='My Account']")
+    public WebElement myAccountMenu;
+
+    @FindBy(xpath = "(//a[text()='Login'])[1]")
+    public WebElement loginMenuButton;
 
 
+    public void navigatetoLogin(){
+        myAccountMenu.click();
+        loginMenuButton.click();
+        BaseClass.waitforelement(2000);
+    }
+
+
+    public void login(String email, String password){
+
+        emailTextField.sendKeys(email);
+        passwordTextField.sendKeys(password);
+        loginButton.click();
+        BaseClass.waitforelement(2000);
+    }
 }
